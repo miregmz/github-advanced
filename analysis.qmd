@@ -1,0 +1,25 @@
+---
+title: "GitHub Advanced"
+author: "Antigravity"
+format: html
+execute:
+  echo: false
+---
+
+```{r}
+#| label: setup
+#| message: false
+library(tidyverse)
+```
+
+```{r}
+#| label: plot
+ggplot(mpg, aes(x = displ, y = hwy, color = class)) +
+  geom_point() +
+  labs(
+    title = "Engine Displacement vs. Highway Gas Mileage",
+    x = "Displacement (liters)",
+    y = "Highway MPG",
+    color = "Class"
+  )
+```
